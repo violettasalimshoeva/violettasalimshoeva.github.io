@@ -504,21 +504,17 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
+      align-items: start;
     }
     .inwork-grid img {
       width: 100%;
-      aspect-ratio: 4/3;
-      object-fit: cover;
+      height: auto;
+      display: block;
       border-radius: 12px;
       transition: transform var(--transition), box-shadow var(--transition);
     }
-    .inwork-grid img.inwork-wide {
-      grid-column: span 2;
-      aspect-ratio: 16/9;
-    }
     .inwork-grid img.inwork-full {
       grid-column: span 3;
-      aspect-ratio: 21/9;
     }
     .inwork-grid img:hover {
       transform: scale(1.02);
@@ -526,7 +522,7 @@
     }
     @media (max-width: 600px) {
       .inwork-grid { grid-template-columns: repeat(2, 1fr); }
-      .inwork-grid img.inwork-wide { grid-column: span 2; }
+      .inwork-grid img.inwork-full { grid-column: span 2; }
     }
 
     .photo-gallery {
