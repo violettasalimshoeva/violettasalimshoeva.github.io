@@ -490,6 +490,47 @@
     }
     footer p { font-size: 13px; color: var(--c-muted); }
 
+    .inwork-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .inwork-grid img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .inwork-grid img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 32px rgba(124,58,237,0.12);
+    }
+    @media (max-width: 600px) {
+      .inwork-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .photo-gallery img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .project-photo {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+      object-fit: cover;
+      max-height: 360px;
+      display: block;
+    }
+
     /* ── ANIMATIONS ── */
     @media (prefers-reduced-motion: no-preference) {
       .fade-in {
@@ -526,6 +567,7 @@
       <ul class="nav-links">
         <li><a href="#about">О себе</a></li>
         <li><a href="#projects">Проекты</a></li>
+        <li><a href="#inwork">Моменты</a></li>
         <li><a href="#education">Образование</a></li>
         <li><a href="#contact">Контакты</a></li>
       </ul>
@@ -555,13 +597,7 @@
         </div>
 
         <div class="hero-photo-wrap fade-in">
-          <!-- Заменить на: <img src="images/photo.jpg" alt="Виолетта Салимшоева" class="hero-photo" /> -->
-          <div class="hero-photo-placeholder">
-            <svg width="48" height="48" fill="none" stroke="#c084fc" stroke-width="1.5" viewBox="0 0 24 24">
-              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-            </svg>
-            <span style="color:#c084fc; font-size:12px;">Фото</span>
-          </div>
+          <img src="Фото офиц.jpg" alt="Виолетта Салимшоева" class="hero-photo" />
         </div>
       </div>
     </div>
@@ -579,6 +615,12 @@
             <p>
               Знаю образование изнутри в разных форматах: строила корпоративное обучение, работала с EdTech-проектами и создаю сложные офлайн-программы для управленческих аудиторий.
             </p>
+          </div>
+
+          <div class="photo-gallery">
+            <img src="30.10.2024-0194.jpg" alt="" />
+            <img src="Photo 04-07-26-609.jpg" alt="" />
+            <img src="I88A1373.jpg" alt="" />
           </div>
 
           <div class="brands-row">
@@ -664,6 +706,8 @@
             <li>Организованы выезды на площадки МГТУ им. Баумана, СПбПУ, ТЕХНОНИКОЛЬ</li>
             <li>Выстроена система обратной связи и итоговой аналитики по программе</li>
           </ul>
+          <img src="Photo 23-05-26-125.jpg" alt="Университет будущего" class="project-photo" />
+
           <div class="project-results">
             <div class="result-chip"><span>23 участника</span><span class="chip-label">из 12 вузов, 11 регионов</span></div>
             <div class="result-chip"><span>144 ак. часа</span><span class="chip-label">программа</span></div>
@@ -758,6 +802,22 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- В РАБОТЕ -->
+  <section id="inwork">
+    <div class="container fade-in">
+      <p class="section-label">Моменты</p>
+      <div class="section-divider"></div>
+      <div class="inwork-grid">
+        <img src="Photo 16-08-25-219.jpg" alt="" />
+        <img src="30.10.2024-0274.jpg" alt="" />
+        <img src="Photo 16-08-25-287.jpg" alt="" />
+        <img src="103-Z6V_3739.jpg" alt="" />
+        <img src="Photo 04-07-26-608.jpg" alt="" />
+        <img src="30.10.2024-0287.jpg" alt="" />
       </div>
     </div>
   </section>
