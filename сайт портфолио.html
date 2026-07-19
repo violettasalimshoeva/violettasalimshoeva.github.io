@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Виолетта Салимшоева — Руководитель образовательных программ</title>
+  <meta name="description" content="Портфолио Виолетты Салимшоевой — руководитель образовательных программ, продуктовый подход в бизнес-образовании, Физтех-школа Игоря Рыбакова при МФТИ." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --c-bg:          #fdf8fb;
+      --c-surface:     #ffffff;
+      --c-surface2:    #f7f0f6;
+      --c-violet:      #7c3aed;
+      --c-violet-mid:  #a855f7;
+      --c-rose:        #db2777;
+      --c-rose-light:  #f9a8d4;
+      --c-violet-dim:  rgba(168,85,247,0.08);
+      --c-rose-dim:    rgba(219,39,119,0.07);
+      --c-text:        #1e1024;
+      --c-text-mid:    #4a3358;
+      --c-muted:       #9b7fac;
+      --c-border:      rgba(168,85,247,0.18);
+      --c-border-rose: rgba(219,39,119,0.15);
+      --f-display:     'Cormorant Garamond', Georgia, serif;
+      --f-body:        'Inter', system-ui, sans-serif;
+      --r-card:        14px;
+      --transition:    0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--c-bg);
+      color: var(--c-text);
+      font-family: var(--f-body);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 28px;
+      position: relative;
+      z-index: 1;
+    }
+    section { padding: 96px 0; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 18px 0;
+      background: rgba(253,248,251,0.9);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--c-border);
+    }
+    nav .container { display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo {
+      font-family: var(--f-display);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--c-text);
+    }
+    .nav-logo span { color: var(--c-rose); }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--c-muted);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      transition: color var(--transition);
+    }
+    .nav-links a:hover { color: var(--c-violet); }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Gradient blobs */
+    #hero::before {
+      content: '';
+      position: absolute;
+      width: 700px; height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(168,85,247,0.10) 0%, transparent 70%);
+      top: -120px; right: -180px;
+      pointer-events: none;
+    }
+    #hero::after {
+      content: '';
+      position: absolute;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(219,39,119,0.08) 0%, transparent 70%);
+      bottom: 0; left: -100px;
+      pointer-events: none;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 64px;
+      align-items: center;
+      width: 100%;
+    }
+    .hero-eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--c-rose);
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-family: var(--f-display);
+      font-size: clamp(48px, 6vw, 84px);
+      font-weight: 300;
+      line-height: 1.02;
+      letter-spacing: -0.01em;
+      color: var(--c-text);
+      margin-bottom: 14px;
+    }
+    h1 em {
+      font-style: italic;
+      background: linear-gradient(135deg, var(--c-violet), var(--c-rose));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-role {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--c-violet-mid);
+      margin-bottom: 6px;
+    }
+    .hero-role-sub {
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: var(--c-muted);
+      margin-bottom: 28px;
+    }
+    .hero-pitch {
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--c-text-mid);
+      max-width: 520px;
+      margin-bottom: 40px;
+    }
+    .hero-cta-group { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 28px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--c-violet), var(--c-rose));
+      color: #fff;
+      font-family: var(--f-body);
+      font-size: 14px;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      transition: opacity var(--transition), transform var(--transition);
+    }
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 28px;
+      border-radius: 10px;
+      background: transparent;
+      border: 1px solid var(--c-border);
+      color: var(--c-violet);
+      font-family: var(--f-body);
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .btn-ghost:hover { background: var(--c-violet-dim); transform: translateY(-1px); }
+
+    /* Photo */
+    .hero-photo-wrap { position: relative; }
+    .hero-photo-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, var(--c-violet-mid), var(--c-rose));
+      z-index: 0;
+    }
+    .hero-photo {
+      position: relative; z-index: 1;
+      width: 100%; aspect-ratio: 3/4;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+    .hero-photo-placeholder {
+      position: relative; z-index: 1;
+      width: 100%; aspect-ratio: 3/4;
+      border-radius: 20px;
+      background: linear-gradient(160deg, #f3e8ff, #fce7f3);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 12px;
+      color: var(--c-muted);
+      font-size: 13px;
+    }
+
+    /* Stats */
+    .hero-stats {
+      display: flex;
+      gap: 36px;
+      margin-top: 48px;
+      padding-top: 36px;
+      border-top: 1px solid var(--c-border);
+      flex-wrap: wrap;
+    }
+    .stat-num {
+      font-family: var(--f-display);
+      font-size: 40px;
+      font-weight: 300;
+      background: linear-gradient(135deg, var(--c-violet), var(--c-rose));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+    }
+    .stat-label { font-size: 12px; color: var(--c-muted); margin-top: 4px; }
+
+    /* ── ABOUT ── */
+    #about { background: var(--c-surface); }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--c-rose);
+      margin-bottom: 12px;
+    }
+    .section-divider {
+      width: 40px; height: 2px;
+      background: linear-gradient(to right, var(--c-violet), var(--c-rose));
+      margin-bottom: 28px;
+      border-radius: 2px;
+    }
+    h2 {
+      font-family: var(--f-display);
+      font-size: clamp(32px, 4vw, 54px);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--c-text);
+      margin-bottom: 40px;
+    }
+    h2 em {
+      font-style: italic;
+      background: linear-gradient(135deg, var(--c-violet), var(--c-rose));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .about-text p { color: var(--c-text-mid); margin-bottom: 18px; font-size: 16px; line-height: 1.8; }
+    .about-text p:last-child { margin-bottom: 0; }
+
+    /* Brand pills */
+    .brands-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .brand-pill {
+      display: inline-flex; align-items: center;
+      padding: 7px 16px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      border: 1.5px solid;
+      letter-spacing: 0.02em;
+      transition: transform var(--transition);
+    }
+    .brand-pill:hover { transform: translateY(-1px); }
+    .brand-pill.violet {
+      color: var(--c-violet);
+      border-color: rgba(124,58,237,0.3);
+      background: rgba(124,58,237,0.06);
+    }
+    .brand-pill.rose {
+      color: var(--c-rose);
+      border-color: rgba(219,39,119,0.25);
+      background: rgba(219,39,119,0.05);
+    }
+
+    /* Superpowers */
+    .powers-title {
+      font-size: 12px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--c-muted); margin-bottom: 20px;
+    }
+    .power-item {
+      display: flex; gap: 14px; align-items: flex-start;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(168,85,247,0.1);
+    }
+    .power-item:last-child { border-bottom: none; }
+    .power-icon {
+      width: 34px; height: 34px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, rgba(124,58,237,0.1), rgba(219,39,119,0.08));
+      border: 1px solid var(--c-border);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 15px;
+    }
+    .power-text { font-size: 14px; line-height: 1.6; color: var(--c-text-mid); }
+    .power-text strong { display: block; color: var(--c-text); font-weight: 600; margin-bottom: 2px; }
+
+    /* ── PROJECTS ── */
+    #projects { background: var(--c-bg); }
+    .projects-intro { margin-bottom: 52px; }
+    .project-cards { display: flex; flex-direction: column; gap: 24px; }
+    .project-card {
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: var(--r-card);
+      padding: 40px;
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .project-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, var(--c-violet), var(--c-rose));
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+    .project-card:hover {
+      border-color: rgba(168,85,247,0.35);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(124,58,237,0.08);
+    }
+    .project-card:hover::before { opacity: 1; }
+    .project-client {
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--c-rose); margin-bottom: 8px;
+    }
+    .project-title {
+      font-family: var(--f-display);
+      font-size: 26px; font-weight: 400;
+      line-height: 1.2; color: var(--c-text);
+      margin-bottom: 14px;
+    }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 20px; }
+    .tag {
+      font-size: 11px; font-weight: 500;
+      padding: 4px 11px; border-radius: 20px;
+      background: var(--c-violet-dim);
+      border: 1px solid rgba(124,58,237,0.2);
+      color: var(--c-violet);
+    }
+    .tag.rose {
+      background: var(--c-rose-dim);
+      border-color: rgba(219,39,119,0.2);
+      color: var(--c-rose);
+    }
+    .project-task {
+      font-size: 14px; color: var(--c-text-mid);
+      line-height: 1.7; margin-bottom: 20px;
+    }
+    .project-steps { list-style: none; margin-bottom: 24px; }
+    .project-steps li {
+      font-size: 14px; color: var(--c-text-mid);
+      line-height: 1.65; padding: 4px 0 4px 18px;
+      position: relative;
+    }
+    .project-steps li::before {
+      content: '·'; position: absolute; left: 4px;
+      color: var(--c-violet); font-size: 18px; line-height: 1.2;
+    }
+    .project-results { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+    .result-chip {
+      display: inline-flex; align-items: baseline; gap: 6px;
+      padding: 8px 16px; border-radius: 9px;
+      background: linear-gradient(135deg, rgba(124,58,237,0.06), rgba(219,39,119,0.04));
+      border: 1px solid var(--c-border);
+      font-size: 14px; font-weight: 600; color: var(--c-violet);
+    }
+    .chip-label { font-size: 11px; color: var(--c-muted); font-weight: 400; }
+    .project-quote {
+      margin-top: 20px;
+      padding: 18px 22px;
+      border-left: 3px solid;
+      border-image: linear-gradient(to bottom, var(--c-violet), var(--c-rose)) 1;
+      background: linear-gradient(135deg, rgba(124,58,237,0.04), rgba(219,39,119,0.03));
+      border-radius: 0 10px 10px 0;
+    }
+    .project-quote p {
+      font-family: var(--f-display);
+      font-style: italic; font-size: 18px;
+      color: var(--c-text); line-height: 1.65;
+      margin-bottom: 10px;
+    }
+    .project-quote cite { font-size: 13px; color: var(--c-text-mid); font-style: normal; }
+
+    /* ── EDUCATION ── */
+    #education { background: var(--c-surface); }
+    .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .edu-column-title {
+      font-size: 12px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--c-muted); margin-bottom: 24px;
+    }
+    .edu-item {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(168,85,247,0.1);
+    }
+    .edu-item:first-of-type { padding-top: 0; }
+    .edu-item:last-child { border-bottom: none; }
+    .edu-year {
+      font-family: var(--f-display);
+      font-size: 16px;
+      background: linear-gradient(135deg, var(--c-violet), var(--c-rose));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      min-width: 48px; padding-top: 2px;
+    }
+    .edu-name { font-size: 14px; font-weight: 500; color: var(--c-text); line-height: 1.4; margin-bottom: 2px; }
+    .edu-org { font-size: 13px; color: var(--c-muted); }
+
+    /* ── CONTACT ── */
+    #contact {
+      text-align: center; padding: 120px 0;
+      background: var(--c-bg);
+      position: relative; overflow: hidden;
+    }
+    #contact::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, rgba(168,85,247,0.06) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .contact-heading {
+      font-family: var(--f-display);
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 300; margin-bottom: 14px;
+    }
+    .contact-sub { color: var(--c-muted); font-size: 16px; margin-bottom: 44px; }
+    .contact-links { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .contact-link {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 28px; border-radius: 12px;
+      border: 1px solid var(--c-border);
+      color: var(--c-text-mid);
+      font-size: 14px; font-weight: 500;
+      background: var(--c-surface);
+      transition: all var(--transition);
+    }
+    .contact-link:hover {
+      border-color: var(--c-violet);
+      color: var(--c-violet);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(124,58,237,0.1);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--c-border);
+      padding: 28px 0;
+      text-align: center;
+      background: var(--c-surface);
+    }
+    footer p { font-size: 13px; color: var(--c-muted); }
+
+    /* ── ANIMATIONS ── */
+    @media (prefers-reduced-motion: no-preference) {
+      .fade-in {
+        opacity: 0; transform: translateY(20px);
+        transition: opacity 0.65s ease, transform 0.65s ease;
+      }
+      .fade-in.visible { opacity: 1; transform: translateY(0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .fade-in { opacity: 1; transform: none; }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-photo-wrap { display: none; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .edu-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 24px; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 64px 0; }
+      .project-card { padding: 24px; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="container">
+      <span class="nav-logo">Виолетта Салимшоева</span>
+      <ul class="nav-links">
+        <li><a href="#about">О себе</a></li>
+        <li><a href="#projects">Проекты</a></li>
+        <li><a href="#education">Образование</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <h1 class="fade-in">Виолетта<br /><em>Салимшоева</em></h1>
+          <p class="hero-role fade-in">Руководитель образовательных программ</p>
+          <p class="hero-role-sub fade-in">Продуктовый подход в бизнес-образовании</p>
+          <p class="hero-pitch fade-in">
+            Создаю образовательные программы для руководителей бизнеса и госструктур. С 2018 года в образовании — от корпоративных тренингов до комплексных офлайн-программ федерального масштаба. Руководитель направления по образовательной деятельности Физтех-школы Игоря Рыбакова при МФТИ.
+          </p>
+          <div class="hero-cta-group fade-in">
+            <a href="#projects" class="btn-primary">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+              Смотреть проекты
+            </a>
+            <a href="#contact" class="btn-ghost">Написать</a>
+          </div>
+
+
+        </div>
+
+        <div class="hero-photo-wrap fade-in">
+          <!-- Заменить на: <img src="images/photo.jpg" alt="Виолетта Салимшоева" class="hero-photo" /> -->
+          <div class="hero-photo-placeholder">
+            <svg width="48" height="48" fill="none" stroke="#c084fc" stroke-width="1.5" viewBox="0 0 24 24">
+              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+            <span style="color:#c084fc; font-size:12px;">Фото</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="fade-in">
+          <p class="section-label">О себе</p>
+          <div class="section-divider"></div>
+          <h2>Образование,<br /><em>которое работает</em></h2>
+          <div class="about-text">
+            <p>
+              Знаю образование изнутри в разных форматах: строила корпоративное обучение, работала с EdTech-проектами и создаю сложные офлайн-программы для управленческих аудиторий.
+            </p>
+          </div>
+
+          <div class="brands-row">
+            <span class="brand-pill violet">Учи.ру</span>
+            <span class="brand-pill violet">Яндекс Практикум</span>
+            <span class="brand-pill violet">Нетология</span>
+            <span class="brand-pill violet">VK Education</span>
+            <span class="brand-pill rose">Физтех-школа Игоря Рыбакова при МФТИ</span>
+            <span class="brand-pill rose">Рыбаков Фонд</span>
+          </div>
+        </div>
+
+        <div class="fade-in">
+          <p class="powers-title">Мои суперсилы</p>
+          <div class="power-item">
+            <div class="power-icon">🧱</div>
+            <div class="power-text">
+              <strong>Системность на всех уровнях</strong>
+              Одинаково хорошо работаю с концепцией программы и операционными деталями — могу и придумать, и собрать руками.
+            </div>
+          </div>
+          <div class="power-item">
+            <div class="power-icon">🎯</div>
+            <div class="power-text">
+              <strong>Опыт со сложной аудиторией</strong>
+              Создаю программы для мэров, ректоров и топ-менеджеров — людей, чьё время стоит дорого и чьи ожидания высоки.
+            </div>
+          </div>
+          <div class="power-item">
+            <div class="power-icon">🔄</div>
+            <div class="power-text">
+              <strong>Переводчик между экспертом и аудиторией</strong>
+              Вытаскиваю суть из эксперта и превращаю её в образовательный продукт без искажений.
+            </div>
+          </div>
+          <div class="power-item">
+            <div class="power-icon">⚖️</div>
+            <div class="power-text">
+              <strong>Работаю на стыке интересов</strong>
+              Учитываю позиции стейкхолдеров, визионеров, академической среды и маркетинга — и нахожу решение, которое работает для всех.
+            </div>
+          </div>
+          <div class="power-item">
+            <div class="power-icon">🤝</div>
+            <div class="power-text">
+              <strong>Эмпатичный руководитель</strong>
+              В моей команде низкая текучка, а сотрудники вырастают в самостоятельных руководителей.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="projects-intro fade-in">
+        <p class="section-label">Проекты</p>
+        <div class="section-divider"></div>
+        <h2>Что я делаю</h2>
+      </div>
+
+      <div class="project-cards">
+
+        <!-- 1. Университет будущего — РЕАЛЬНЫЙ, ПЕРВЫМ -->
+        <div class="project-card fade-in">
+          <p class="project-client">Физтех-школа Игоря Рыбакова при МФТИ</p>
+          <h3 class="project-title">Университет будущего: трансформация через партнёрства</h3>
+          <div class="project-tags">
+            <span class="tag rose">Реальный проект</span>
+            <span class="tag">Продуктовое проектирование</span>
+            <span class="tag">Управление командой</span>
+            <span class="tag">Система оценки</span>
+          </div>
+          <p class="project-task">
+            Спроектировать и запустить программу для управленческих команд российских университетов — ректоров, проректоров и их команд — с фокусом на трансформацию через партнёрства с бизнесом и индустрией.
+          </p>
+          <ul class="project-steps">
+            <li>Собрала продуктовую команду с нуля и выстроила операционный процесс</li>
+            <li>Спроектирована программа: образовательные результаты, логика 6 модулей, система итоговой защиты</li>
+            <li>Подобраны и согласованы спикеры и советники, в том числе ректор и президент МФТИ</li>
+            <li>Организованы выезды на площадки МГТУ им. Баумана, СПбПУ, ТЕХНОНИКОЛЬ</li>
+            <li>Выстроена система обратной связи и итоговой аналитики по программе</li>
+          </ul>
+          <div class="project-results">
+            <div class="result-chip"><span>23 участника</span><span class="chip-label">из 12 вузов, 11 регионов</span></div>
+            <div class="result-chip"><span>144 ак. часа</span><span class="chip-label">программа</span></div>
+            <div class="result-chip"><span>90,4%</span><span class="chip-label">удовлетворённость</span></div>
+            <div class="result-chip"><span>NPS 77%</span></div>
+            <div class="result-chip"><span>72,7%</span><span class="chip-label">достигли цели полностью</span></div>
+          </div>
+        </div>
+
+        <!-- 2. MA SH -->
+        <div class="project-card fade-in">
+          <p class="project-client">Заказчик: Мария Рябова, основательница MA SH</p>
+          <h3 class="project-title">Как повысить переход студентов модельной академии со ступени 1 на ступень 2</h3>
+          <div class="project-tags">
+            <span class="tag">CJM · 10 этапов</span>
+            <span class="tag">Юнит-экономика</span>
+            <span class="tag">Глубинные интервью</span>
+            <span class="tag">TAM/SAM/SOM</span>
+            <span class="tag rose">HTML-прототип</span>
+          </div>
+          <p class="project-task">
+            Из 40 студентов первого модуля на второй фактически перешли только 4. Нужно найти причины оттока и предложить решения, повышающие конверсию и доходность.
+          </p>
+          <ul class="project-steps">
+            <li>Продуктовое исследование: глубинные интервью со студентами, родителями и выпускниками, кабинетное исследование, бенчмаркинг конкурентов, расчёт объёма рынка</li>
+            <li>Построен CJM на 10 этапов с эмоциональной дугой и точками оттока</li>
+            <li>Рассчитана юнит-экономика и финансовая модель решения, приоритизация по ICE</li>
+            <li>Разработан HTML-прототип лендинга для модуля 2</li>
+          </ul>
+          <div class="project-results">
+            <div class="result-chip"><span>+240 957 ₽/мес</span><span class="chip-label">прогноз прироста прибыли</span></div>
+            <div class="result-chip"><span>4% → 50%</span><span class="chip-label">целевая доходимость</span></div>
+            <div class="result-chip"><span>0,17 мес</span><span class="chip-label">окупаемость</span></div>
+          </div>
+          <div class="project-quote">
+            <p>«Работа получилась глубокой, внимательной и действительно ценной для нас. Отдельно хочу отметить качественные и подробные исследования рынка и нашей аудитории»</p>
+            <cite>— Мария Рябова, руководитель академии MA SH</cite>
+          </div>
+        </div>
+
+        <!-- 3. NeuroForce -->
+        <div class="project-card fade-in">
+          <p class="project-client">Заказчик: NeuroForce, нейротех-стартап, Казахстан</p>
+          <h3 class="project-title">NeuroForce — Telegram-бот как точка входа в нейротех-продукт</h3>
+          <div class="project-tags">
+            <span class="tag">CJM + SJM</span>
+            <span class="tag">BMC + VPC</span>
+            <span class="tag">Google Trends · Wordstat</span>
+            <span class="tag rose">Прототип + 7 тестов</span>
+            <span class="tag rose">Финмодель × 3 сценария</span>
+          </div>
+          <p class="project-task">
+            Создать бесплатный Telegram-бот как верхушку воронки — мягко знакомить холодную аудиторию с подходом компании и подводить к платному продукту (офлайн-демо с БОС-гарнитурой).
+          </p>
+          <ul class="project-steps">
+            <li>Продуктовое исследование: кабинетное (8 направлений), Google Trends, Wordstat, глубинные и экспертные интервью, 7 решенческих интервью на прототипе</li>
+            <li>Спроектирована архитектура бота, построены CJM и SJM</li>
+            <li>Прототип протестирован и доработан по результатам тестов</li>
+            <li>Сформировано дерево метрик, финансовая модель (3 сценария), VPC и BMC</li>
+          </ul>
+          <div class="project-results">
+            <div class="result-chip"><span>2 044 620 ₸/мес</span><span class="chip-label">выручка (опт. сценарий)</span></div>
+            <div class="result-chip"><span>LTV/CAC = 1,35×</span></div>
+          </div>
+          <div class="project-quote">
+            <p>«Версия прототипа превосходит по попаданию в целевую аудиторию изначальную задачу в брифе. Отдельное спасибо за исследование — именно его нам не хватало»</p>
+            <cite>— Команда NeuroForce</cite>
+          </div>
+        </div>
+
+        <!-- 4. БВШД -->
+        <div class="project-card fade-in">
+          <p class="project-client">Заказчик: БВШД (Британская высшая школа дизайна), Москва</p>
+          <h3 class="project-title">Как выйти на рынок декорирования Краснодара — от идеи до продуктового решения</h3>
+          <div class="project-tags">
+            <span class="tag">TAM/SAM/SOM</span>
+            <span class="tag">Конкурентный анализ</span>
+            <span class="tag">Глубинные интервью</span>
+            <span class="tag rose">BMC + VPC</span>
+          </div>
+          <p class="project-task">
+            Оценить рыночный потенциал хоумстейджинга и декорирования для выпускников и предложить продуктовое решение для выхода на рынок Краснодара.
+          </p>
+          <ul class="project-steps">
+            <li>Анализ рынка: TAM/SAM/SOM, конкурентный анализ, 10 глубинных интервью с декораторами, потенциальными клиентами и экспертами</li>
+            <li>Сформированы Value Proposition Canvas и Business Model Canvas</li>
+            <li>Разработано продуктовое решение: три тарифных пакета под разные сегменты аудитории</li>
+          </ul>
+          <div class="project-quote">
+            <p>«Проведено 10 глубинных интервью, качественно сегментирована ЦА. Верно отмечен рост спроса на хоумстейджинг в регионах с активным вводом жилья»</p>
+            <cite>— Команда БВШД</cite>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container fade-in">
+      <p class="section-label">Образование</p>
+      <div class="section-divider"></div>
+      <h2>Настоящий<br /><em>lifelong learner</em></h2>
+
+      <div class="edu-grid">
+        <div>
+          <p class="edu-column-title">Дополнительное образование</p>
+          <div class="edu-item">
+            <span class="edu-year">2025</span>
+            <div>
+              <div class="edu-name">Продакт-менеджмент в образовании</div>
+              <div class="edu-org">School of Education</div>
+            </div>
+          </div>
+          <div class="edu-item">
+            <span class="edu-year">2024</span>
+            <div>
+              <div class="edu-name">Проектирование образовательного опыта</div>
+              <div class="edu-org">School of Education</div>
+            </div>
+          </div>
+          <div class="edu-item">
+            <span class="edu-year">2023</span>
+            <div>
+              <div class="edu-name">Проектирование онлайн-мероприятий в Miro</div>
+              <div class="edu-org">Александр Цветков (Яндекс) · Дарья Селезнева (Skyeng)</div>
+            </div>
+          </div>
+          <div class="edu-item">
+            <span class="edu-year">2021</span>
+            <div>
+              <div class="edu-name">Методист онлайн-курсов</div>
+              <div class="edu-org">EdMarket (Нетология)</div>
+            </div>
+          </div>
+          <div class="edu-item">
+            <span class="edu-year">2020</span>
+            <div>
+              <div class="edu-name">Методы бизнес-тренинга</div>
+              <div class="edu-org">International College of Business Trainers (ICBT)</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="edu-column-title">Высшее образование</p>
+          <div class="edu-item">
+            <span class="edu-year">2018</span>
+            <div>
+              <div class="edu-name">Лингвистика — бакалавр с отличием</div>
+              <div class="edu-org">МГОУ, факультет романо-германских языков</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container fade-in">
+      <h2 class="contact-heading">Давайте <em>поговорим</em></h2>
+      <p class="contact-sub">Открыта к разговору о проектах, партнёрствах и интересных задачах в образовании</p>
+      <div class="contact-links">
+        <a href="https://t.me/Violetta_Salimshoeva" class="contact-link" target="_blank" rel="noopener">
+          <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.027 9.553c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.088 14.43l-2.95-.924c-.64-.203-.652-.64.136-.947l11.527-4.443c.533-.194 1.003.13.761.132z"/></svg>
+          Telegram
+        </a>
+        <a href="mailto:violettasalimshoeva@yandex.ru" class="contact-link">
+          <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          violettasalimshoeva@yandex.ru
+        </a>
+        <a href="https://github.com/violettasalimshoeva" class="contact-link" target="_blank" rel="noopener">
+          <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Виолетта Салимшоева · Образование, которое работает</p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
